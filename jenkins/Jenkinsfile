@@ -6,7 +6,7 @@ pipeline {
 
 		stage ('teste'){
 
-			step {
+			steps {
 				git 'https://github.com/gabrielgonoring/question-app-user-service.git'
 				sh 'mvn package'
 			}
