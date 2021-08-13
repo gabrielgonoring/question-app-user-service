@@ -15,7 +15,7 @@ pipeline {
 			}
 		}
 
-		stages ('fazendo deploy'){
+		stage ('fazendo deploy'){
 
 			steps {
 				sh 'java -jar target/*.jar'
