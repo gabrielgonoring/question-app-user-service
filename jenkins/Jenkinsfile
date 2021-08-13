@@ -8,12 +8,20 @@ pipeline {
 
 	stages{
 
-		stage ('teste'){
+		stage ('empacotando'){
 
 			steps {
-				git 'https://github.com/gabrielgonoring/question-app-user-service.git'
 				sh 'mvn package'
 			}
 		}
+
+		stages ('fazendo deploy'){
+
+			steps {
+				sh 'java -jar target/*.jar'
+			}
+		
+		}
+
 	}
 }
